@@ -1,6 +1,6 @@
 import { PrismaPg } from "@prisma/adapter-pg";
 import dotenv from "dotenv";
-import { PrismaClient } from "../generated/prisma/client";
+import { PrismaClient } from "./generated/prisma/client";
 import { dirname, resolve } from "path";
 import { fileURLToPath } from "url";
 
