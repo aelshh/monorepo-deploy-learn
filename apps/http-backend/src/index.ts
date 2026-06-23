@@ -24,3 +24,21 @@ app.post("/signup", async (req, res) => {
     message: "Signed up successfuly",
   });
 });
+app.get("/user/:id", (req, res) => {
+  res.json({
+    message: "Hey there from the http server",
+  });
+});
+
+app.post("/signup", async (req, res) => {
+  const { username, password } = req.body;
+  await prisma.user.create({
+    data: {
+      username,
+      password,
+    },
+  });
+  res.json({
+    message: "Signed up successfuly",
+  });
+});
