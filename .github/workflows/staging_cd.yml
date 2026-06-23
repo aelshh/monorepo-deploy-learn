@@ -14,4 +14,4 @@ jobs:
           touch ~/.ssh/known_hosts
           echo "${{secrets.KNOWN_HOSTS}}" &> ~/.ssh/known_hosts
           chmod 600 ~/ssh_key 
-          ssh -i ~/ssh_key adarsh@98.70.26.188 -t "cd monorepo-deploy-learn/ && git fetch origin main && git reset --hard origin/main && export PATH=\$PATH:/home/adarsh/.nvm/versions/node/v22.13.1/bin && npm install -g pnpm && pnpm install && pnpm run build && pm2  restart ws-backend http-backend web "
+          ssh -i ~/ssh_key adarsh@98.70.26.188 -t "cd monorepo-deploy-learn/ && git fetch origin main && git reset --hard origin/main && export PATH=\$PATH:/home/adarsh/.nvm/versions/node/v24.17.0/bin && npm install -g pnpm && pnpm install && pnpm run build && pm2  restart ws-backend http-backend web "
